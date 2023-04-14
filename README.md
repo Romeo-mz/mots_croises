@@ -1,18 +1,30 @@
-## Getting Started
+# Projet de Gestion de Mots dans une Grille de Mots Croisés
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Ce projet est une implémentation en Java de la gestion de mots dans une grille de mots croisés. Il permet de créer une grille de mots croisés, d'ajouter des mots dans la grille en vérifiant qu'ils respectent les contraintes de la grille, et de vérifier si tous les mots ont été placés correctement.
 
-## Folder Structure
+## Fonctionnalités
 
-The workspace contains two folders by default, where:
+Le projet propose les fonctionnalités suivantes :
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- Création d'une grille de mots croisés avec une taille horizontale et verticale spécifiée.
+- Initialisation de la grille avec des mots à placer en tant que caractères.
+- Affichage de la grille de mots croisés.
+- Ajout de mots dans la grille en vérifiant les contraintes de la grille.
+- Vérification si tous les mots ont été placés correctement dans la grille.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Classes et Méthodes
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Le projet est composé des classes suivantes :
 
-## Dependency Management
+- `Mot` : Représente un mot à placer dans la grille. Cette classe a des attributs tels que le mot lui-même, sa direction (horizontale ou verticale), et ses coordonnées de début et de fin sur la grille.
+    - Méthodes :
+        - `Mot(String mot, int debutLigne, int debutColonne, Direction direction)`: Constructeur pour créer un objet Mot avec le mot spécifié, sa position de début et sa direction.
+        - Autres membres de la classe (getters, setters, etc.).
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+
+- `Grille` : Classe principale qui représente la grille de mots croisés.
+    - Méthodes :
+        - `Grille(int nbLignes, int nbColonnes)`: Constructeur pour créer une grille de mots croisés avec la taille horizontale et verticale spécifiée.
+        - `setGrille(char[][] mots)`: Méthode pour initialiser la grille avec des cases vides et les caractères des mots à placer.
+        - `showGrille()`: Méthode pour afficher la grille de mots croisés.
+

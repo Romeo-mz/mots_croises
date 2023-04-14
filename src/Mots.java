@@ -12,5 +12,8 @@ public class Mots {
         this.coordY = coordY;
     }
 
+    public String getMot() {
+        return mot;
+    }
     
 }
